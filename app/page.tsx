@@ -1,6 +1,4 @@
 export default function HomePage() {
-  console.log("HOME");
-
   return (
     <>
       <h1>Carlos M. Janon</h1>
