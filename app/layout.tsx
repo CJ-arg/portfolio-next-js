@@ -7,9 +7,9 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body>
-        <header>[header]</header>
+        <header>[header TODO]</header>
         <main>{children}</main>
-        <footer>[footer]</footer>
+        <footer>[footer TODO]</footer>
       </body>
     </html>
   );
