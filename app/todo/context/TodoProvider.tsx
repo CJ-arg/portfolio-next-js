@@ -28,9 +28,9 @@ interface TodoProviderProps {
 }
 
 const TodoProvider = ({ children }: TodoProviderProps) => {
-  const [taskState, dispatch] = useReducer(todoReducer, INITIAL_STATE);
+  const [todoState, dispatch] = useReducer(todoReducer, INITIAL_STATE);
   return (
-    <TodoContext.Provider value={{ taskState }}>
+    <TodoContext.Provider value={{ todoState }}>
       {children}
     </TodoContext.Provider>
   );
