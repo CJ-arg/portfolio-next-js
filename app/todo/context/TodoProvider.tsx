@@ -18,6 +18,16 @@ const INITIAL_STATE: TodoState = {
       description: "Recolectar las maderas",
       completed: false,
     },
+    {
+      id: "3",
+      description: "Recolectar las teclas",
+      completed: false,
+    },
+    {
+      id: "4",
+      description: "Recolectar las tazas",
+      completed: false,
+    },
   ],
   completed: 0,
   pending: 2,
@@ -29,8 +39,11 @@ interface TodoProviderProps {
 
 const TodoProvider = ({ children }: TodoProviderProps) => {
   const [todoState, dispatch] = useReducer(todoReducer, INITIAL_STATE);
+  const toggleTodo = (id: string) => {
+    dispatch({ type: "toggleTodo", payload: { id } });
+  };
   return (
-    <TodoContext.Provider value={{ todoState }}>
+    <TodoContext.Provider value={{ todoState, toggleTodo }}>
       {children}
     </TodoContext.Provider>
   );

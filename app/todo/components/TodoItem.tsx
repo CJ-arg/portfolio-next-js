@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Todo } from "../interfaces/interfaces";
+import { TodoContext } from "../context/TodoContext";
 interface props {
   todo: Todo;
 }
 
 const TodoItem = ({ todo }: props) => {
+  const { toggleTodo } = useContext(TodoContext);
   const handleDbClick = () => {
-    console.log("dble", todo.description);
+    toggleTodo(todo.id);
   };
 
   return (
-    <li onDoubleClick={handleDbClick} key={todo.id}>
+    <li
+      style={{
+        cursor: "pointer",
+        textDecoration: todo.completed ? "line-through" : "",
+      }}
+      onDoubleClick={handleDbClick}
+      key={todo.id}
+    >
       {todo.description}
     </li>
   );
