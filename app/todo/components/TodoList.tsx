@@ -4,9 +4,9 @@ import { log } from "console";
 import TodoItem from "./TodoItem";
 
 const TodoList = () => {
-  const { todoState } = useContext(TodoContext);
-  const { todos } = todoState;
-
+  // const { todoState } = useContext(TodoContext);
+  // const { todos } = todoState;
+  const;
   return (
     <div>
       <ul>
