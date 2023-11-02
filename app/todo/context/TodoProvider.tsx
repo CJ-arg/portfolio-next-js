@@ -1,9 +1,7 @@
 import React, { useReducer } from "react";
 import { TodoContext } from "./TodoContext";
-import { JsxElement } from "typescript";
 import { TodoState } from "../interfaces/interfaces";
 import { todoReducer } from "./todoReducer";
-import { initialize } from "next/dist/server/lib/render-server";
 
 const INITIAL_STATE: TodoState = {
   todoCount: 2,

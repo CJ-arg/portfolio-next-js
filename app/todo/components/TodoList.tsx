@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import { TodoContext } from "../context/TodoContext";
 import { log } from "console";
 import TodoItem from "./TodoItem";
+import { useTodos } from "../hooks/useTodos";
 
 const TodoList = () => {
   // const { todoState } = useContext(TodoContext);
   // const { todos } = todoState;
-  const;
+  const { todos } = useTodos();
   return (
     <div>
       <ul>
